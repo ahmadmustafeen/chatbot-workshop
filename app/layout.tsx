@@ -1,6 +1,4 @@
 import { Roboto } from 'next/font/google';
-import Footer from 'app/Footer';
-import Header from 'app/Header';
 
 import { AppConfig } from 'src/config/AppConfig';
 
@@ -19,13 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang={AppConfig.locale}>
-      <body className={`${roboto.variable} bg-gray-50 font-sans`}>
+      <body className={`${roboto.variable} font-sans`}>
         <div className='flex min-h-screen flex-col justify-between'>
           <div>
-            <Header />
             <div className='h-full'>{children}</div>
           </div>
-          <Footer />
         </div>
       </body>
     </html>
